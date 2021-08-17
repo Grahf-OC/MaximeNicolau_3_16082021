@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+h1
+{
+    color: $h1-color;
+}
+
+h2
+{
+    color: $h2-color;
+}
+
+h3
+{
+    color: $h3-color;
+}
