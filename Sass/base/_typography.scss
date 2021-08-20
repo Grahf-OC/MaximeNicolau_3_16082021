@@ -1,16 +1,21 @@
 @use '../abstracts/' as *;
 
-h1
-{
-    color: $h1-color;
+html {
+    font-size: 100%;
+    box-sizing: border-box;
 }
 
-h2
-{
-    color: $h2-color;
+* {
+    box-sizing: inherit;
 }
 
-h3
-{
-    color: $h3-color;
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;;
+}
+
+h1 h2 h3{
+    font-family: 'Shrikhand', cursive;;
 }

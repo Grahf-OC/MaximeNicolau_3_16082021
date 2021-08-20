@@ -1,0 +1,11 @@
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@function toRem($n) {
+
+    @return ($n / 16) + rem;
+ 
+ }
