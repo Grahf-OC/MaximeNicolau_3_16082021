@@ -1,36 +1,45 @@
 @use '../abstracts/' as *;
 
 .top-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: #F6F6F6;
+   @include flexcenter(column);
+    background: $grey;
 
     &__heading {
-        font-size: 1.3em;
+        font-size: 1.2rem;
         padding: rem(42) rem(80) rem(22) rem(80);
-        
     }
 
     &__content {
-        font-size: 1.2em;
+        font-size: 1.1rem;
         padding: 0 rem(31) rem(33) rem(31);
         font-weight: 400;
+        text-align: center;
+        color: #646060;
     }
+}
 
-    &__div-button {
-        width: 100%;
+.mid-section {
+    &__heading {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
 
-        &__button {
-            background: linear-gradient(to bottom right, $pink, 40%, $purple);
-            color: white;
-            padding: rem(20) rem(25);
-            border-radius: rem(35);
-            border: transparent;
-            margin-bottom: rem(56);
-            font-size: 1.2em;
-            cursor: pointer;
+.list {
+    @include flexcenter(column);
+    &__element {
+        width: 90%;
+        padding: rem(33) rem(69);
+        margin: 1rem auto;
+        background: $grey;
+        text-align: center;
+        border-radius: rem(20);
+        box-shadow: 0 rem(10) rem(10) #eaeaea;
+        cursor: pointer;
+        
+        &--third {
+            background: #F5EDFF;
         }
     }
-
 }
+

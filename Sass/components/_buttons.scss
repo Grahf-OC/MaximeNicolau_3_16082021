@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+.top-section {
+  &__button {
+    background: linear-gradient(to bottom right, $pink, 40%, $purple);
+    color: white;
+    padding: rem(20) rem(25);
+    border-radius: rem(35);
+    border: transparent;
+    margin-bottom: rem(56);
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+}
