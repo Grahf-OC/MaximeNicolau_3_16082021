@@ -4,8 +4,8 @@
     align-items: center;
 }
 
-@function toRem($n) {
+@function rem($n) {             //transforme pixels en rem
 
     @return ($n / 16) + rem;
  
- }
+ } 

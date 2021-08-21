@@ -3,5 +3,5 @@
 .logo {
     width: 100%;
     @include flexcenter;
-    padding: toRem(64) toRem(107);
+    padding: rem(42) 0 rem(22) 0;
 }

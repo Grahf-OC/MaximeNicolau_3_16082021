@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+
+.form-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid transparent;
+    padding: rem(20) 0;
+    background: #EAEAEA;
+    text-align: center;
+    box-shadow: inset 0px 10px 10px -10px rgb(175, 175, 175);
+    font-size: 1.1em;
+    font-weight: 500;
+}
