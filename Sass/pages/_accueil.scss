@@ -21,12 +21,12 @@
 .mid-section {
   &__heading {
     padding: 1rem;
-    margin: 1rem;
-    max-width: 1280px;
+    margin: rem(50) 1rem 0.7rem 1rem;
   }
 }
 
 .list {
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -46,7 +46,12 @@
     position: relative;
     &:last-child {
       background: #f5edff;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
+    }
+    &:hover {
+        background: linear-gradient(to bottom right, $pink, 70%, $purple);
+        transition-duration: 1000ms;
+        transition-delay: 1s;
     }
     &::before {
       counter-increment: section;
@@ -71,4 +76,58 @@
           color: $purple;
       }
   }
+}
+
+.bottom-section {
+    background: $grey;
+  &__heading {
+    padding: rem(60) 1rem 1rem 1rem;
+    margin: rem(50) 1rem 0.7rem 1rem;
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 90%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 1.5rem;
+    background: white;
+    box-shadow: 0 rem(10) rem(10) $darkgrey;
+    &__img {
+        width: 100%;
+        height: rem(175);
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+    &__badge {
+        position: absolute;
+        top: rem(18);
+        right: rem(12);
+        background: #99E2D0;
+        color: #189677;
+        padding: rem(8) rem(15);
+    }
+    &__infos {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    &__title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    &__btn
+    {
+        position: absolute;
+        bottom: rem(18);
+        right: rem(12);
+        font-size: 1.5rem;
+    }
 }
