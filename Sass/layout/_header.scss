@@ -1,7 +1,6 @@
 @use '../abstracts/' as *;
 
 .logo {
-    width: 100%;
     @include flexcenter;
     padding: rem(42) 0 rem(22) 0;
 }

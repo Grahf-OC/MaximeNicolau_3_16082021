@@ -1,45 +1,74 @@
 @use '../abstracts/' as *;
 
 .top-section {
-   @include flexcenter(column);
-    background: $grey;
+  @include flexcenter(column);
+  background: $grey;
 
-    &__heading {
-        font-size: 1.2rem;
-        padding: rem(42) rem(80) rem(22) rem(80);
-    }
+  &__heading {
+    font-size: 1.2rem;
+    padding: rem(42) rem(80) rem(22) rem(80);
+  }
 
-    &__content {
-        font-size: 1.1rem;
-        padding: 0 rem(31) rem(33) rem(31);
-        font-weight: 400;
-        text-align: center;
-        color: #646060;
-    }
+  &__content {
+    font-size: 1.1rem;
+    padding: 0 rem(31) rem(33) rem(31);
+    font-weight: 400;
+    text-align: center;
+    color: #646060;
+  }
 }
 
 .mid-section {
-    &__heading {
-        padding: 1rem;
-        margin: 1rem;
-    }
+  &__heading {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 1280px;
+  }
 }
 
 .list {
-    @include flexcenter(column);
-    &__element {
-        width: 90%;
-        padding: rem(33) rem(69);
-        margin: 1rem auto;
-        background: $grey;
-        text-align: center;
-        border-radius: rem(20);
-        box-shadow: 0 rem(10) rem(10) #eaeaea;
-        cursor: pointer;
-        
-        &--third {
-            background: #F5EDFF;
-        }
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  counter-reset: section;
+  list-style-type: none;
+  &__element {
+    @include flexcenter;
+    width: 100%;
+    padding: rem(33) rem(69);
+    margin: 1rem auto;
+    background: $grey;
+    text-align: center;
+    border-radius: rem(20);
+    box-shadow: 0 rem(10) rem(10) $darkgrey;
+    cursor: pointer;
+    position: relative;
+    &:last-child {
+      background: #f5edff;
+      margin-bottom: 4rem;
     }
-}
+    &::before {
+      counter-increment: section;
+      content: counter(section);
+      @include flexcenter;
+      border-radius: 100%;
+      background: $purple;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: white;
+      position: absolute;
+      left: -1rem;
+    }
+  }
+  &__text {
+      margin: 0 2rem;
+  }
+  &__icon {
+      font-size: 1.2rem;
 
+      &--purple {
+          color: $purple;
+      }
+  }
+}

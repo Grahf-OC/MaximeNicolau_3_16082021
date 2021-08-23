@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>OhMyfood</title>
     <meta name="description" content="Ohmyfood" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b2b97c6fd7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="public/css/main.css" />
-</head>
+  </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <a href="#"><img src="images/logo/ohmyfood@2x.svg" alt="Logo OhMyfood"></a>
-    </div>
-    <form method="POST" action="get">
-      <div>
-        <input type="search" name="ville" id="ville" value="Paris, Belleville" class="form-main">
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><img src="images/logo/ohmyfood@2x.svg" alt="Logo OhMyfood"
+        /></a>
       </div>
-    </form>
-  </header>
+      <form method="POST" action="get" class="form-main">
+        <div>
+          <span><i class="fas fa-map-marker-alt"></i></span>
+          <input
+            type="search"
+            name="ville"
+            id="ville"
+            value="Paris, Belleville"
+            placeholder="Votre Ville"
+            class="form-main__input"
+          />
+        </div>
+      </form>
+    </header>
 
-  <section class="top-section">
-    <div class="top-section__heading">
-      <h2>Réservez le menu qui vous convient</h2>
+    <main>
+      <section class="top-section">
+        <div class="top-section__heading">
+          <h2>Réservez le menu qui vous convient</h2>
+        </div>
 
-    </div>
+        <div class="top-section__content">
+          <p>
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+        </div>
 
-    <div class="top-section__content">
-      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <div>
+          <button class="top-section__button" type="button">
+            Explorer nos restaurants
+          </button>
+        </div>
+      </section>
 
-    </div>
-
-    <div>
-      <button class="top-section__button" type="button">Explorer nos restaurants</button> 
-    </div>
-
-  </section>  
-
-  <section class="mid-section">
-    <h2 class="mid-section__heading">Fonctionnement</h2>
-    <ol class="list">
-      <li class="list__element">
-        <p>Choisissez un restaurant</p>
-
-      </li>
-      <li class="list__element">
-        <p>Composez votre menu</p>
-        </li>
-      <li class="list__element list__element--third">
-        <p>Dégustez au restaurant</p>
-
-      </li>
-
-
-    </ol>
-  </section>
-
-</body>
-
+      <section class="mid-section">
+        <h2 class="mid-section__heading">Fonctionnement</h2>
+        <ol class="list">
+          <li class="list__element">
+            <span><i class="list__icon fas fa-mobile-alt"></i></span>
+            <p class="list__text">Choisissez un restaurant</p>
+          </li>
+          <li class="list__element">
+            <span><i class="list__icon fas fa-list-ul"></i></span>
+            <p class="list__text">Composez votre menu</p>
+          </li>
+          <li class="list__element">
+            <span><i class="list__icon list__icon--purple fas fa-store"></i></span>
+            <p class="list__text">Dégustez au restaurant</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
 </html>

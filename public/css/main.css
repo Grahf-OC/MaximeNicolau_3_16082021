@@ -25,7 +25,8 @@ h1 {
   margin: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
   padding: 0;
   margin: 0;
 }
@@ -47,20 +48,25 @@ ol {
 }
 
 .form-main {
-  width: 100%;
   display: flex;
   justify-content: center;
-  border: 1px solid transparent;
-  padding: 1.25rem 0;
-  background: #EAEAEA;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: inset 0px 10px 10px -10px #afafaf;
   text-align: center;
+  background: #eaeaea;
+}
+.form-main__input {
+  padding: 1.25rem 1rem;
+  border: 0;
   box-shadow: inset 0px 10px 10px -10px #afafaf;
   font-size: 1rem;
   font-weight: 500;
+  background: #eaeaea;
 }
 
 .top-section__button {
-  background: linear-gradient(to bottom right, #FF79DA, 40%, #9356DC);
+  background: linear-gradient(to bottom right, #ff79da, 40%, #9356dc);
   color: white;
   padding: 1.25rem 1.5625rem;
   border-radius: 2.1875rem;
@@ -72,7 +78,6 @@ ol {
 }
 
 .logo {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +90,7 @@ ol {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 .top-section__heading {
   font-size: 1.2rem;
@@ -102,24 +107,57 @@ ol {
 .mid-section__heading {
   padding: 1rem;
   margin: 1rem;
+  max-width: 1280px;
 }
 
 .list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  counter-reset: section;
+  list-style-type: none;
 }
 .list__element {
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
   padding: 2.0625rem 4.3125rem;
   margin: 1rem auto;
-  background: #F6F6F6;
+  background: #f6f6f6;
   text-align: center;
   border-radius: 1.25rem;
   box-shadow: 0 0.625rem 0.625rem #eaeaea;
   cursor: pointer;
+  position: relative;
 }
-.list__element--third {
-  background: #F5EDFF;
+.list__element:last-child {
+  background: #f5edff;
+  margin-bottom: 4rem;
+}
+.list__element::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 100%;
+  background: #9356dc;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  position: absolute;
+  left: -1rem;
+}
+.list__text {
+  margin: 0 2rem;
+}
+.list__icon {
+  font-size: 1.2rem;
+}
+.list__icon--purple {
+  color: #9356dc;
 }/*# sourceMappingURL=main.css.map */

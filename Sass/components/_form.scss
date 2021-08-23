@@ -1,15 +1,17 @@
 @use '../abstracts/' as *;
 
-
 .form-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid transparent;
-    padding: rem(20) 0;
-    background: #EAEAEA;
-    text-align: center;
+  @include flexcenter;
+  box-shadow: inset 0px 10px 10px -10px rgb(175, 175, 175);
+  text-align: center;
+  background: $darkgrey;
+
+  &__input {
+    padding: rem(20) 1rem;
+    border: 0;
     box-shadow: inset 0px 10px 10px -10px rgb(175, 175, 175);
     font-size: 1rem;
     font-weight: 500;
+    background: $darkgrey;
+  }
 }
