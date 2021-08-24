@@ -5,14 +5,13 @@
   background: $grey;
 
   &__heading {
-    font-size: 1.2rem;
+    font-size: $font-norm;
     padding: rem(42) rem(80) rem(22) rem(80);
   }
 
   &__content {
     font-size: 1.1rem;
     padding: 0 rem(31) rem(33) rem(31);
-    font-weight: 400;
     text-align: center;
     color: #646060;
   }
@@ -70,7 +69,7 @@
       margin: 0 2rem;
   }
   &__icon {
-      font-size: 1.2rem;
+      font-size: $font-norm;
 
       &--purple {
           color: $purple;
@@ -117,7 +116,7 @@
     }
     &__infos {
         padding: 1rem;
-        font-size: 1.2rem;
+        font-size: $font-norm;
     }
     &__title {
         font-weight: bold;

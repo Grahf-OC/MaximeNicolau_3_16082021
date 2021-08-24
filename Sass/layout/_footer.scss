@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+
+footer {
+    background: #353535;
+    padding: 2rem 1rem 1rem 2rem;;
+}
+
+.logo-min
+{
+    font-family: "Shrikhand", cursive;
+    color: white;
+    font-size: $font-norm;
+    padding-bottom: 1rem;
+}
+
+.footer-list {
+    color: white;
+    &__option {
+        padding: 0.5rem 0;
+        cursor: pointer;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    &__icon1 {
+        padding-right: 1rem;
+    }
+    &__icon2 {
+        padding-right: 0.5rem;
+    }
+}
