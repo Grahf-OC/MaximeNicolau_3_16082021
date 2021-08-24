@@ -210,6 +210,9 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
 }
+.cards:last-child {
+  padding-bottom: 5rem;
+}
 
 .card {
   width: 90%;
