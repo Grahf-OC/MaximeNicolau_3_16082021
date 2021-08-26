@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 @mixin flexcenter($direction: row) {
     display: flex;
     justify-content: center;
@@ -10,3 +12,7 @@
     @return ($n / 16) + rem;
  
  } 
+
+ @mixin boxshadow {
+    box-shadow: 0 rem(10) rem(10) $darkgrey;
+}

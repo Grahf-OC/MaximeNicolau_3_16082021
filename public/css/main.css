@@ -47,7 +47,7 @@ ol {
   margin: 0;
 }
 
-.form-main {
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ ol {
   text-align: center;
   background: #eaeaea;
 }
-.form-main__input {
+.form__input {
   padding: 1.25rem 1rem;
   border: 0;
   box-shadow: inset 0px 10px 10px -10px #afafaf;
@@ -65,7 +65,7 @@ ol {
   background: #eaeaea;
 }
 
-.top-section__button {
+.container__button {
   background: linear-gradient(to bottom right, #ff79da, 40%, #9356dc);
   color: white;
   padding: 1.25rem 1.5625rem;
@@ -77,59 +77,137 @@ ol {
   font-family: "Roboto", sans-serif;
 }
 
-.logo {
+.image-box__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 15.625rem;
+  width: 100%;
+}
+
+.menu-section {
+  background: #f6f6f6;
+  max-width: 1280px;
+  margin: -3rem auto 0 auto;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.menu-section__container {
+  width: 90%;
+  margin: 0 auto;
+}
+.menu-section__heading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+.menu-section__heading {
+  font-size: 1.8rem;
+}
+.menu-section__heart {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.menu-section__title {
+  color: #494646;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.625rem 0.625rem #eaeaea;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+}
+.menu-card__infos {
+  display: flex;
+  flex-direction: column;
+}
+.menu-card__heading {
+  font-size: 1.2rem;
+}
+.menu-card__price {
+  margin-top: 1.5rem;
+}
+
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 2.625rem 0 1.375rem 0;
 }
+.header__arrow {
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+}
 
-footer {
+.footer {
   background: #353535;
   padding: 2rem 1rem 1rem 2rem;
 }
-
-.logo-min {
+.footer__logo {
   font-family: "Shrikhand", cursive;
   color: white;
   font-size: 1.2rem;
   padding-bottom: 1rem;
 }
-
-.footer-list {
+.footer__list {
   color: white;
 }
-.footer-list__option {
+.footer__option {
   padding: 0.5rem 0;
   cursor: pointer;
 }
-.footer-list__option--bold {
+.footer__option--bold {
   font-weight: bold;
 }
-.footer-list__icon1 {
+.footer__icon1 {
   padding-right: 1rem;
 }
-.footer-list__icon2 {
+.footer__icon2 {
   padding-right: 0.5rem;
 }
 
-.top-section {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #f6f6f6;
 }
-.top-section__heading {
+.container__heading {
   font-size: 1.2rem;
   padding: 2.625rem 5rem 1.375rem 5rem;
+  text-align: center;
 }
-.top-section__content {
+.container__subheading {
   font-size: 1.1rem;
   padding: 0 1.9375rem 2.0625rem 1.9375rem;
   text-align: center;
-  color: #646060;
+  color: #494646;
 }
 
 .mid-section__heading {
@@ -152,7 +230,7 @@ footer {
   align-items: center;
   flex-direction: row;
   width: 100%;
-  padding: 2.0625rem 4.3125rem;
+  padding: 2.0625rem 2.0625rem;
   margin: 1rem auto;
   background: #f6f6f6;
   text-align: center;
@@ -183,7 +261,7 @@ footer {
   height: 1.5rem;
   color: white;
   position: absolute;
-  left: -1rem;
+  left: -0.7rem;
 }
 .list__text {
   margin: 0 2rem;
@@ -202,15 +280,14 @@ footer {
   padding: 3.75rem 1rem 1rem 1rem;
   margin: 3.125rem 1rem 0.7rem 1rem;
 }
-
-.cards {
+.bottom-section__cards {
   width: 100%;
   display: flex;
   flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
 }
-.cards:last-child {
+.bottom-section__cards:last-child {
   padding-bottom: 5rem;
 }
 
@@ -233,7 +310,7 @@ footer {
   position: absolute;
   top: 1.125rem;
   right: 0.75rem;
-  background: #99E2D0;
+  background: #99e2d0;
   color: #189677;
   padding: 0.5rem 0.9375rem;
 }

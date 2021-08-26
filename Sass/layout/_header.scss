@@ -1,6 +1,13 @@
 @use '../abstracts/' as *;
 
-.logo {
-    @include flexcenter;
-    padding: rem(42) 0 rem(22) 0;
+.header {
+  @include flexcenter;
+
+  padding: rem(42) 0 rem(22) 0;
+
+  &__arrow {
+    position: absolute;
+    top: 3rem;
+    left: 1.5rem;
+  }
 }

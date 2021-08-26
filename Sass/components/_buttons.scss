@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 
-.top-section {
+.container {
   &__button {
     background: linear-gradient(to bottom right, $pink, 40%, $purple);
     color: white;

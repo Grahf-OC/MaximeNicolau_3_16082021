@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 
-.form-main {
+.form {
   @include flexcenter;
   box-shadow: inset 0px 10px 10px -10px rgb(175, 175, 175);
   text-align: center;

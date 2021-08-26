@@ -1,0 +1,78 @@
+@use '../abstracts/' as *;
+
+.image-box {
+  &__image {
+    object-fit: cover;
+    height: rem(250);
+    width: 100%;
+  }
+}
+
+.menu-section {
+  background: $grey;
+  max-width: 1280px;
+  margin: -3rem auto 0 auto;
+  border-top-left-radius: rem(40);
+  border-top-right-radius: rem(40);
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__heading-box {
+    @include flexcenter;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+  }
+
+  &__heart {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    color: $lightgrey;
+    font-size: $font-norm;
+    font-weight: 500;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  margin-bottom: 2rem;
+  @include boxshadow;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+  &__infos {
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    font-size: 1.2rem;
+  }
+  &__price {
+    margin-top: 1.5rem;
+  }
+}

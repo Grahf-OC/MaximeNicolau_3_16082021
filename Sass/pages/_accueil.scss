@@ -1,19 +1,20 @@
 @use '../abstracts/' as *;
 
-.top-section {
+.container {
   @include flexcenter(column);
   background: $grey;
 
   &__heading {
     font-size: $font-norm;
     padding: rem(42) rem(80) rem(22) rem(80);
+    text-align: center;
   }
 
-  &__content {
+  &__subheading {
     font-size: 1.1rem;
     padding: 0 rem(31) rem(33) rem(31);
     text-align: center;
-    color: #646060;
+    color: $lightgrey;
   }
 }
 
@@ -35,12 +36,12 @@
   &__element {
     @include flexcenter;
     width: 100%;
-    padding: rem(33) rem(69);
+    padding: rem(33) rem(33);
     margin: 1rem auto;
     background: $grey;
     text-align: center;
     border-radius: rem(20);
-    box-shadow: 0 rem(10) rem(10) $darkgrey;
+    @include boxshadow;
     cursor: pointer;
     position: relative;
     &:last-child {
@@ -48,9 +49,9 @@
       margin-bottom: 3rem;
     }
     &:hover {
-        background: linear-gradient(to bottom right, $pink, 70%, $purple);
-        transition-duration: 1000ms;
-        transition-delay: 1s;
+      background: linear-gradient(to bottom right, $pink, 70%, $purple);
+      transition-duration: 1000ms;
+      transition-delay: 1s;
     }
     &::before {
       counter-increment: section;
@@ -62,30 +63,27 @@
       height: 1.5rem;
       color: white;
       position: absolute;
-      left: -1rem;
+      left: -0.7rem;
     }
   }
   &__text {
-      margin: 0 2rem;
+    margin: 0 2rem;
   }
   &__icon {
-      font-size: $font-norm;
-
-      &--purple {
-          color: $purple;
-      }
+    font-size: $font-norm;
+    &--purple {
+      color: $purple;
+    }
   }
 }
 
 .bottom-section {
-    background: $grey;
+  background: $grey;
   &__heading {
     padding: rem(60) 1rem 1rem 1rem;
     margin: rem(50) 1rem 0.7rem 1rem;
-    }
-}
-
-.cards {
+  }
+  &__cards {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -94,42 +92,42 @@
     &:last-child {
       padding-bottom: 5rem;
     }
+  }
 }
 
 .card {
-    width: 90%;
-    margin: 1rem auto;
-    position: relative;
+  width: 90%;
+  margin: 1rem auto;
+  position: relative;
+  border-radius: 1.5rem;
+  background: white;
+  @include boxshadow;
+  &__img {
+    width: 100%;
+    height: rem(175);
+    object-fit: cover;
     border-radius: 1.5rem;
-    background: white;
-    box-shadow: 0 rem(10) rem(10) $darkgrey;
-    &__img {
-        width: 100%;
-        height: rem(175);
-        object-fit: cover;
-        border-radius: 1.5rem;
-    }
-    &__badge {
-        position: absolute;
-        top: rem(18);
-        right: rem(12);
-        background: #99E2D0;
-        color: #189677;
-        padding: rem(8) rem(15);
-    }
-    &__infos {
-        padding: 1rem;
-        font-size: $font-norm;
-    }
-    &__title {
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
-    &__btn
-    {
-        position: absolute;
-        bottom: rem(18);
-        right: rem(12);
-        font-size: 1.5rem;
-    }
+  }
+  &__badge {
+    position: absolute;
+    top: rem(18);
+    right: rem(12);
+    background: #99e2d0;
+    color: #189677;
+    padding: rem(8) rem(15);
+  }
+  &__infos {
+    padding: 1rem;
+    font-size: $font-norm;
+  }
+  &__title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  &__btn {
+    position: absolute;
+    bottom: rem(18);
+    right: rem(12);
+    font-size: 1.5rem;
+  }
 }
