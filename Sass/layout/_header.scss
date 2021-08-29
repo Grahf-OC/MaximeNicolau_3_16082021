@@ -1,13 +1,22 @@
 @use '../abstracts/' as *;
 
 .header {
-  @include flexcenter;
-
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
   padding: rem(42) 0 rem(22) 0;
 
   &__arrow {
-    position: absolute;
-    top: 3rem;
-    left: 1.5rem;
+    grid-column: 1;
+    margin-left: 2rem;
+    font-size: 1.5rem;
   }
+
+  &__logo {
+    display: flex;
+    grid-column: 2;
+    justify-content: center;
+  }
+
+  
 }

@@ -116,6 +116,12 @@
     color: #189677;
     padding: rem(8) rem(15);
   }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__infos {
     padding: 1rem;
     font-size: $font-norm;
@@ -125,9 +131,37 @@
     margin-bottom: 0.5rem;
   }
   &__btn {
-    position: absolute;
-    bottom: rem(18);
-    right: rem(12);
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    &:hover {
+      & .card__bg {
+        opacity: 1;
+      }
+      & .card__like {
+        opacity: 0;
+      }
+    }
+  }
+  &__like {
+    transition: 900ms;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(0deg, $pink, 40%, $purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    z-index: -1;
+    transition: 900ms;
   }
 }
