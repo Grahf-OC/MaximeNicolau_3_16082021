@@ -65,8 +65,12 @@ ol {
   background: #eaeaea;
 }
 
+.container {
+  /*............BOUTON EXPLORER.............*/
+}
 .container__button {
   background: linear-gradient(to bottom right, #ff79da, 40%, #9356dc);
+  box-shadow: 0 0.625rem 0.625rem #eaeaea;
   color: white;
   padding: 1.25rem 1.5625rem;
   border-radius: 2.1875rem;
@@ -75,6 +79,64 @@ ol {
   font-size: 1.1rem;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+.container__button:hover::after {
+  opacity: 1;
+}
+.container__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 2.1875rem;
+  box-shadow: 0 0.625rem 0.625rem #dddcdc;
+  background: linear-gradient(to bottom right, #ff86de, 40%, #9e67e0);
+}
+
+.card {
+  /*......................COEUR........................*/
+}
+.card__btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.card__btn:hover .card__bg,
+.card__btn :active .card__bg,
+.card__btn :focus .card__bg {
+  opacity: 1;
+}
+.card__btn:hover .card__like,
+.card__btn :active .card__like,
+.card__btn :focus .card__like {
+  opacity: 0;
+}
+.card__like {
+  transition: 900ms;
+}
+.card__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-linear-gradient(0deg, #ff79da, 40%, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  z-index: -1;
+  transition: 900ms;
 }
 
 .image-box__image {
@@ -242,13 +304,10 @@ ol {
   position: relative;
 }
 .list__element:last-child {
-  background: #f5edff;
   margin-bottom: 3rem;
 }
 .list__element:hover {
-  background: linear-gradient(to bottom right, #ff79da, 70%, #9356dc);
-  transition-duration: 1000ms;
-  transition-delay: 1s;
+  background: #f5edff;
 }
 .list__element::before {
   counter-increment: section;
@@ -300,6 +359,7 @@ ol {
   border-radius: 1.5rem;
   background: white;
   box-shadow: 0 0.625rem 0.625rem #eaeaea;
+  cursor: pointer;
 }
 .card__img {
   width: 100%;
@@ -324,39 +384,9 @@ ol {
 .card__infos {
   padding: 1rem;
   font-size: 1.2rem;
+  flex-grow: 1;
 }
 .card__title {
   font-weight: bold;
   margin-bottom: 0.5rem;
-}
-.card__btn {
-  display: flex;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin: 1rem;
-  position: relative;
-  z-index: 1;
-}
-.card__btn:hover .card__bg {
-  opacity: 1;
-}
-.card__btn:hover .card__like {
-  opacity: 0;
-}
-.card__like {
-  transition: 900ms;
-}
-.card__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: -webkit-linear-gradient(0deg, #ff79da, 40%, #9356dc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-  z-index: -1;
-  transition: 900ms;
 }/*# sourceMappingURL=main.css.map */

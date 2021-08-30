@@ -1,8 +1,10 @@
 @use '../abstracts/' as *;
 
 .container {
+  /*............BOUTON EXPLORER.............*/
   &__button {
     background: linear-gradient(to bottom right, $pink, 40%, $purple);
+    @include boxshadow;
     color: white;
     padding: rem(20) rem(25);
     border-radius: rem(35);
@@ -11,5 +13,73 @@
     font-size: 1.1rem;
     cursor: pointer;
     font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      border-radius: rem(35);
+      box-shadow: 0 0.625rem 0.625rem #dddcdc;
+      background: linear-gradient(
+        to bottom right,
+        scale-color($pink, $lightness: 10%),
+        40%,
+        scale-color($purple, $lightness: 10%)
+      );
+    }
+  }
+}
+
+.card {
+  /*......................COEUR........................*/
+  &__btn {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover,
+    :active,
+    :focus {
+      & .card__bg {
+        opacity: 1;
+      }
+      & .card__like {
+        opacity: 0;
+      }
+    }
+  }
+  &__like {
+    transition: 900ms;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(0deg, $pink, 40%, $purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    z-index: -1;
+    transition: 900ms;
   }
 }
