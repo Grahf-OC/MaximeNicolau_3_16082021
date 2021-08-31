@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: $direction
+    flex-direction: $direction;
 }
 
 @function rem($n) {             //transforme pixels en rem
@@ -13,6 +13,6 @@
  
  } 
 
- @mixin boxshadow {
-    box-shadow: 0 rem(10) rem(10) $darkgrey;
+ @mixin boxshadow($color: $darkgrey) {
+    box-shadow: 0 rem(10) rem(10) $color;
 }

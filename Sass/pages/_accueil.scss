@@ -33,29 +33,34 @@
   margin: 0 auto;
   counter-reset: section;
   list-style-type: none;
+  &:last-child {
+    margin-bottom: 3rem;
+  }
   &__element {
     @include flexcenter;
+    @include boxshadow;
     width: 100%;
     padding: rem(33) rem(33);
     margin: 1rem auto;
     background: $grey;
     text-align: center;
     border-radius: rem(20);
-    @include boxshadow;
     cursor: pointer;
     position: relative;
-    &:last-child {
-      margin-bottom: 3rem;
-    }
+    transition: 300ms;
+    
     &:hover {
       background: #f5edff;
+    }
+    &:hover > .list__icon {
+      color: $first-col;
     }
     &::before {
       counter-increment: section;
       content: counter(section);
       @include flexcenter;
       border-radius: 100%;
-      background: $purple;
+      background: $first-col;
       width: 1.5rem;
       height: 1.5rem;
       color: white;
@@ -68,9 +73,7 @@
   }
   &__icon {
     font-size: $font-norm;
-    &--purple {
-      color: $purple;
-    }
+    transition: 300ms;
   }
 }
 
@@ -110,7 +113,7 @@
     position: absolute;
     top: rem(18);
     right: rem(12);
-    background: #99e2d0;
+    background: $third-col;
     color: #189677;
     padding: rem(8) rem(15);
   }

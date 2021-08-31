@@ -66,6 +66,7 @@ ol {
 }
 
 .container {
+  background: #f6f6f6;
   /*............BOUTON EXPLORER.............*/
 }
 .container__button {
@@ -87,6 +88,7 @@ ol {
 }
 .container__button::after {
   content: "";
+  transition: 250ms;
   position: absolute;
   top: 0;
   right: 0;
@@ -100,6 +102,7 @@ ol {
 }
 
 .card {
+  background: white;
   /*......................COEUR........................*/
 }
 .card__btn {
@@ -111,14 +114,10 @@ ol {
   z-index: 1;
   cursor: pointer;
 }
-.card__btn:hover .card__bg,
-.card__btn :active .card__bg,
-.card__btn :focus .card__bg {
+.card__btn:hover .card__bg, .card__btn:active .card__bg, .card__btn:focus .card__bg {
   opacity: 1;
 }
-.card__btn:hover .card__like,
-.card__btn :active .card__like,
-.card__btn :focus .card__like {
+.card__btn:hover .card__like, .card__btn:active .card__like, .card__btn:focus .card__like {
   opacity: 0;
 }
 .card__like {
@@ -288,26 +287,30 @@ ol {
   counter-reset: section;
   list-style-type: none;
 }
+.list:last-child {
+  margin-bottom: 3rem;
+}
 .list__element {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  box-shadow: 0 0.625rem 0.625rem #eaeaea;
   width: 100%;
   padding: 2.0625rem 2.0625rem;
   margin: 1rem auto;
   background: #f6f6f6;
   text-align: center;
   border-radius: 1.25rem;
-  box-shadow: 0 0.625rem 0.625rem #eaeaea;
   cursor: pointer;
   position: relative;
-}
-.list__element:last-child {
-  margin-bottom: 3rem;
+  transition: 300ms;
 }
 .list__element:hover {
   background: #f5edff;
+}
+.list__element:hover > .list__icon {
+  color: #9356dc;
 }
 .list__element::before {
   counter-increment: section;
@@ -329,9 +332,7 @@ ol {
 }
 .list__icon {
   font-size: 1.2rem;
-}
-.list__icon--purple {
-  color: #9356dc;
+  transition: 300ms;
 }
 
 .bottom-section {
