@@ -4,7 +4,7 @@
   background: $grey;
   /*............BOUTON EXPLORER.............*/
   &__button {
-    background: linear-gradient(to bottom right, $second-col, 40%, $first-col);
+    background: linear-gradient(to bottom right, $second-col, 50%, $first-col);
     @include boxshadow;
     color: white;
     padding: rem(20) rem(25);
@@ -33,11 +33,11 @@
       opacity: 0;
       z-index: -1;
       border-radius: rem(35);
-      @include boxshadow(#dddcdc);
+      box-shadow: (0 rem(8) rem(8) #d1cbcb);
       background: linear-gradient(
         to bottom right,
         scale-color($second-col, $lightness: 10%),
-        40%,
+        65%,
         scale-color($first-col, $lightness: 10%)
       );
     }
@@ -61,6 +61,7 @@
     &:focus {
       & .card__bg {
         opacity: 1;
+        transform: scale(1);
       }
       & .card__like {
         opacity: 0;
@@ -68,7 +69,7 @@
     }
   }
   &__like {
-    transition: 900ms;
+    transition: 700ms ease-out;
   }
 
   &__bg {
@@ -77,12 +78,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: -webkit-linear-gradient(0deg, $second-col, 40%, $first-col);
+    background: -webkit-linear-gradient(310deg, $second-col, 60%, $first-col);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
     z-index: -1;
-    transition: 900ms;
+    transform: scale(0.1);
+    transition: 600ms ease-in-out;
   }
 }

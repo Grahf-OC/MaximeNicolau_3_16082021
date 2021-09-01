@@ -51,9 +51,12 @@
     
     &:hover {
       background: #f5edff;
+      transform: scale(1.02);
+      @include boxshadow(#dddcdc);
     }
     &:hover > .list__icon {
       color: $first-col;
+      transform: scale(1.02);
     }
     &::before {
       counter-increment: section;
@@ -103,6 +106,11 @@
   background: white;
   @include boxshadow;
   cursor: pointer;
+  transition: 300ms;
+  &:hover {
+    transform: scale(1.02);
+    @include boxshadow(#dddcdc);
+  }
   &__img {
     width: 100%;
     height: rem(175);

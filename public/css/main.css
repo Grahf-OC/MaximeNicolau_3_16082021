@@ -70,7 +70,7 @@ ol {
   /*............BOUTON EXPLORER.............*/
 }
 .container__button {
-  background: linear-gradient(to bottom right, #ff79da, 40%, #9356dc);
+  background: linear-gradient(to bottom right, #ff79da, 50%, #9356dc);
   box-shadow: 0 0.625rem 0.625rem #eaeaea;
   color: white;
   padding: 1.25rem 1.5625rem;
@@ -97,8 +97,8 @@ ol {
   opacity: 0;
   z-index: -1;
   border-radius: 2.1875rem;
-  box-shadow: 0 0.625rem 0.625rem #dddcdc;
-  background: linear-gradient(to bottom right, #ff86de, 40%, #9e67e0);
+  box-shadow: 0 0.5rem 0.5rem #d1cbcb;
+  background: linear-gradient(to bottom right, #ff86de, 65%, #9e67e0);
 }
 
 .card {
@@ -116,12 +116,13 @@ ol {
 }
 .card__btn:hover .card__bg, .card__btn:active .card__bg, .card__btn:focus .card__bg {
   opacity: 1;
+  transform: scale(1);
 }
 .card__btn:hover .card__like, .card__btn:active .card__like, .card__btn:focus .card__like {
   opacity: 0;
 }
 .card__like {
-  transition: 900ms;
+  transition: 700ms ease-out;
 }
 .card__bg {
   position: absolute;
@@ -129,13 +130,14 @@ ol {
   right: 0;
   bottom: 0;
   left: 0;
-  background: -webkit-linear-gradient(0deg, #ff79da, 40%, #9356dc);
+  background: -webkit-linear-gradient(310deg, #ff79da, 60%, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   z-index: -1;
-  transition: 900ms;
+  transform: scale(0.1);
+  transition: 600ms ease-in-out;
 }
 
 .image-box__image {
@@ -308,9 +310,12 @@ ol {
 }
 .list__element:hover {
   background: #f5edff;
+  transform: scale(1.02);
+  box-shadow: 0 0.625rem 0.625rem #dddcdc;
 }
 .list__element:hover > .list__icon {
   color: #9356dc;
+  transform: scale(1.02);
 }
 .list__element::before {
   counter-increment: section;
@@ -361,6 +366,11 @@ ol {
   background: white;
   box-shadow: 0 0.625rem 0.625rem #eaeaea;
   cursor: pointer;
+  transition: 300ms;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.625rem 0.625rem #dddcdc;
 }
 .card__img {
   width: 100%;
