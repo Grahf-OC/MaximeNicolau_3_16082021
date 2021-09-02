@@ -2,6 +2,9 @@
 
 .container {
   background: $grey;
+  &__div-button {
+    @include flexcenter;
+  }
   /*............BOUTON EXPLORER.............*/
   &__button {
     background: linear-gradient(to bottom right, $second-col, 50%, $first-col);
@@ -16,15 +19,18 @@
     font-family: "Roboto", sans-serif;
     position: relative;
     z-index: 1;
+    &--menu {
+      padding: 1.25rem 4rem;
+    }
     &:hover {
       &::after {
         opacity: 1;
+        transform: scale(1.01);
       }
     }
 
     &::after {
       content: "";
-      transition: 250ms;
       position: absolute;
       top: 0;
       right: 0;
@@ -33,6 +39,7 @@
       opacity: 0;
       z-index: -1;
       border-radius: rem(35);
+      transition: 250ms ease-in-out 30ms;
       box-shadow: (0 rem(8) rem(8) #d1cbcb);
       background: linear-gradient(
         to bottom right,
@@ -85,6 +92,6 @@
     opacity: 0;
     z-index: -1;
     transform: scale(0.1);
-    transition: 600ms ease-in-out;
+    transition: 600ms ease-in-out 30ms;
   }
 }

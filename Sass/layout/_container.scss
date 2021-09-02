@@ -43,6 +43,17 @@
     color: $lightgrey;
     font-size: $font-norm;
     font-weight: 500;
+    padding-bottom: 1rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3.2rem;
+      height: 0.25rem;
+      background: $third-col;
+      left: 0;
+      bottom: 0;
+    }
   }
 }
 
@@ -66,6 +77,34 @@
   padding: 1rem;
   line-height: 1.6rem;
   cursor: pointer;
+  animation: fadein 800ms backwards cubic-bezier(0.69, 1.4, 0.23, 0.86);
+  &__fadein1 {
+    animation-delay: 0.2s;
+  }
+  &__fadein2 {
+    animation-delay: 0.3s;
+  }
+  &__fadein3 {
+    animation-delay: 0.4s;
+  }
+  &__fadein4 {
+    animation-delay: 0.5s;
+  }
+  &__fadein5 {
+    animation-delay: 0.6s;
+  }
+  &__fadein6 {
+    animation-delay: 0.7s;
+  }
+  &__fadein7 {
+    animation-delay: 0.8s;
+  }
+  &__fadein8 {
+    animation-delay: 0.9s;
+  }
+  &__fadein9 {
+    animation-delay: 1s;
+  }
   &__infos {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,30 @@
+/*............................ANIMATION FADE IN MENU.................*/
+@-webkit-keyframes fadein {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -69,6 +96,12 @@ ol {
   background: #f6f6f6;
   /*............BOUTON EXPLORER.............*/
 }
+.container__div-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 .container__button {
   background: linear-gradient(to bottom right, #ff79da, 50%, #9356dc);
   box-shadow: 0 0.625rem 0.625rem #eaeaea;
@@ -83,12 +116,15 @@ ol {
   position: relative;
   z-index: 1;
 }
+.container__button--menu {
+  padding: 1.25rem 4rem;
+}
 .container__button:hover::after {
   opacity: 1;
+  transform: scale(1.01);
 }
 .container__button::after {
   content: "";
-  transition: 250ms;
   position: absolute;
   top: 0;
   right: 0;
@@ -97,6 +133,7 @@ ol {
   opacity: 0;
   z-index: -1;
   border-radius: 2.1875rem;
+  transition: 250ms ease-in-out 30ms;
   box-shadow: 0 0.5rem 0.5rem #d1cbcb;
   background: linear-gradient(to bottom right, #ff86de, 65%, #9e67e0);
 }
@@ -137,7 +174,7 @@ ol {
   opacity: 0;
   z-index: -1;
   transform: scale(0.1);
-  transition: 600ms ease-in-out;
+  transition: 600ms ease-in-out 30ms;
 }
 
 .image-box__image {
@@ -178,6 +215,17 @@ ol {
   color: #494646;
   font-size: 1.2rem;
   font-weight: 500;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.menu-section__title::after {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 0.25rem;
+  background: #99e2d0;
+  left: 0;
+  bottom: 0;
 }
 
 .menu-container {
@@ -200,6 +248,44 @@ ol {
   padding: 1rem;
   line-height: 1.6rem;
   cursor: pointer;
+  -webkit-animation: fadein 800ms backwards cubic-bezier(0.69, 1.4, 0.23, 0.86);
+          animation: fadein 800ms backwards cubic-bezier(0.69, 1.4, 0.23, 0.86);
+}
+.menu-card__fadein1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.menu-card__fadein2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.menu-card__fadein3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.menu-card__fadein4 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.menu-card__fadein5 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu-card__fadein6 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.menu-card__fadein7 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.menu-card__fadein8 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.menu-card__fadein9 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .menu-card__infos {
   display: flex;
