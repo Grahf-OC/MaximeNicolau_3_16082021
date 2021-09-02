@@ -441,17 +441,13 @@ ol {
   transform: scale(0.7);
   -webkit-animation: grow 1.6s;
           animation: grow 1.6s;
+  margin: 1rem;
 }
 .loader__circle:nth-child(2) {
   background: #ff79da;
   transform: scale(0.7);
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-.loader__circle:nth-child(3) {
-  background: #99e2d0;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .container {
