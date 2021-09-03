@@ -277,7 +277,7 @@ ol {
   right: 0;
   bottom: 0;
   left: 0;
-  background: -webkit-linear-gradient(310deg, #ff79da, 60%, #9356dc);
+  background: linear-gradient(310deg, #ff79da, 60%, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
