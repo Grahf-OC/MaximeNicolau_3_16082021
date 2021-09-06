@@ -36,12 +36,12 @@
   width: 150px;
   border: 8px solid $first-col;
   border-radius: 50%;
-  animation: loader-1 2s cubic-bezier(.6,-0.28,.74,.05);
+  animation: loader-1 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 .loader span::after {
   border: 8px solid $second-col;
-  animation: loader-2 2s cubic-bezier(.6,-0.28,.74,.05);
+  animation: loader-2 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 /*.loader {
@@ -102,6 +102,11 @@
   margin: 0 auto;
   counter-reset: section;
   list-style-type: none;
+  @media (min-width: 1001px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
   &:last-child {
     margin-bottom: 3rem;
   }
@@ -117,6 +122,9 @@
     cursor: pointer;
     position: relative;
     transition: 300ms;
+    @media (min-width: 1001px) {
+      width: 31%;
+    }
 
     &:hover {
       background: #f5edff;
@@ -164,6 +172,10 @@
     &:last-child {
       padding-bottom: 5rem;
     }
+    @media (min-width: 1001px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -176,6 +188,9 @@
   @include boxshadow;
   cursor: pointer;
   transition: 300ms;
+  @media (min-width: 1001px) {
+    width: 45%;
+  }
   &:hover {
     transform: scale(1.02);
     @include boxshadow(#dddcdc);
