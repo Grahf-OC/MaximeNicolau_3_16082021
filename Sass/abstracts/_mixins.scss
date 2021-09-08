@@ -1,18 +1,24 @@
 @use '../abstracts/variables' as *;
 
 @mixin flexcenter($direction: row) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
 }
 
-@function rem($n) {             //transforme pixels en rem
+@function rem($n) {
+  //transforme pixels en rem
 
-    @return ($n / 16) + rem;
- 
- } 
+  @return ($n / 16) + rem;
+}
 
- @mixin boxshadow($color: $darkgrey) {
-    box-shadow: 0 rem(10) rem(10) $color;
+@mixin boxshadow($color: $darkgrey) {
+  box-shadow: 0 rem(10) rem(10) $color;
+}
+
+@mixin query($width: 1001px) {
+  @media (min-width: $width) {
+    @content;
+  }
 }

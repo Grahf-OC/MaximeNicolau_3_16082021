@@ -17,12 +17,12 @@
   padding-bottom: 2rem;
   position: relative;
   z-index: 1;
-  @media (min-width: 1001px) {
+  @include query(1001px) {
     padding-right: 2rem;
   }
 
   &__flex {
-    @media (min-width: 1001px) {
+    @include query(1001px) {
       width: 30%;
       margin: 1rem;
     }
@@ -31,7 +31,10 @@
   &__container {
     width: 90%;
     margin: 0 auto;
-    @media (min-width: 1001px) {
+    @include query(768px) {
+      width: 80%;
+    }
+    @include query(1001px) {
       display: flex;
       flex-wrap: wrap;
       margin: 1rem;
@@ -45,7 +48,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem 0rem;
-    @media (min-width: 1001px) {
+    @include query(1001px) {
       width: 100%;
     }
   }
@@ -83,7 +86,7 @@
   justify-content: center;
   width: 100%;
   margin: 2rem auto 0 auto;
-  @media (min-width: 1001px) {
+  @include query(1001px) {
     margin-right: 1rem;
   }
 }
