@@ -68,6 +68,7 @@
     font-weight: 500;
     padding-bottom: 1rem;
     position: relative;
+    /* Soulignements Entrées plats desserts en After*/
     &::after {
       content: "";
       position: absolute;
@@ -109,6 +110,22 @@
   }
   &:hover &__check {
     margin-right: 0;
+  }
+  &__check {
+    background: $third-col;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-left: 1rem;
+    margin-right: -6rem;
+    transition: 0.5s;
+  }
+
+  &__check-icon {
+    color: white;
+    font-size: 2rem;
+    padding: 1.65rem;
+    transform: rotate(320deg);
+    transition: 0.5s;
   }
   &__fadein1 {
     animation-delay: 0.2s;
@@ -169,22 +186,5 @@
 
   &__choice {
     display: flex;
-  }
-
-  &__check {
-    background: $third-col;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    margin-left: 1rem;
-    margin-right: -6rem;
-    transition: 0.5s;
-  }
-
-  &__check-icon {
-    color: white;
-    font-size: 2rem;
-    padding: 1.65rem;
-    transform: rotate(320deg);
-    transition: 0.5s;
   }
 }
