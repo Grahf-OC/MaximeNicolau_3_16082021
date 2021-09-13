@@ -113,8 +113,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  -webkit-animation: fadeout 2s both;
-          animation: fadeout 2s both;
+  -webkit-animation: fadeout 2.3s both;
+          animation: fadeout 2.3s both;
 }
 
 .loader {
@@ -124,8 +124,8 @@
   width: 100%;
   height: 100%;
   z-index: 6;
-  -webkit-animation: fadeout 2s both;
-          animation: fadeout 2s both;
+  -webkit-animation: fadeout 2.3s both;
+          animation: fadeout 2.3s both;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,14 +149,14 @@
   width: 150px;
   border: 8px solid #9356dc;
   border-radius: 50%;
-  -webkit-animation: loader-1 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-          animation: loader-1 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  -webkit-animation: loader-1 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+          animation: loader-1 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 .loader span::after {
   border: 8px solid #ff79da;
-  -webkit-animation: loader-2 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-          animation: loader-2 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  -webkit-animation: loader-2 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+          animation: loader-2 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 /*
@@ -458,6 +458,7 @@ ol {
   }
 }
 
+/*--------------Carte plat----------*/
 .menu-card {
   display: flex;
   justify-content: space-between;
@@ -637,6 +638,7 @@ ol {
   }
 }
 
+/*---------------------Menu FONCTIONNEMENT------------------*/
 .list {
   max-width: 1280px;
   display: flex;

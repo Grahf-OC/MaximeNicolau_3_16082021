@@ -70,7 +70,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  animation: fadeout 2s both;
+  animation: fadeout 2.3s both;
 }
 
 .loader {
@@ -80,7 +80,7 @@
   width: 100%;
   height: 100%;
   z-index: 6;
-  animation: fadeout 2s both;
+  animation: fadeout 2.3s both;
   @include flexcenter;
 }
 .loader span {
@@ -99,12 +99,12 @@
   width: 150px;
   border: 8px solid $first-col;
   border-radius: 50%;
-  animation: loader-1 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  animation: loader-1 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 .loader span::after {
   border: 8px solid $second-col;
-  animation: loader-2 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  animation: loader-2 2.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 /*
